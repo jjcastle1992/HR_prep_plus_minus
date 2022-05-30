@@ -13,7 +13,13 @@ vector<string> split(const string &);
  */
 
 void plusMinus(vector<int> arr) {
+    //Determine ratio of positive elements in array
 
+    //Determine ratio of negative elements in array
+
+    //Determine ratio of zero (0) elements in array
+
+    //Print each ratio separated by a newline with a precision of 6 decimals
 }
 
 int main()
