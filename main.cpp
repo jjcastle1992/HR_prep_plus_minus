@@ -62,16 +62,19 @@ int main()
     getline(cin, arr_temp_temp);
 
     vector<string> arr_temp = split(rtrim(arr_temp_temp));
+    if (n > 0 && n <= 100) {
+        vector<int> arr(n);
 
-    vector<int> arr(n);
+        for (int i = 0; i < n; i++) {
+            int arr_item = stoi(arr_temp[i]);
 
-    for (int i = 0; i < n; i++) {
-        int arr_item = stoi(arr_temp[i]);
+            if (arr_item >= -100 && arr_item <= 100) {
+                arr[i] = arr_item;
+            }
+        }
 
-        arr[i] = arr_item;
+        plusMinus(arr);
     }
-
-    plusMinus(arr);
 
     return 0;
 }
