@@ -16,11 +16,13 @@ void plusMinus(vector<int> arr) {
     int numPositives = 0;
     int numNegatives = 0;
     int numZeroes = 0;
+    float arraySize = arr.size();
     float ratioPositive = 0.0;
     float ratioNegative = 0.0;
     float ratioZero = 0.0;
     for (int i = 0; i < arr.size(); i++) {
         int currentValue = 0;
+        currentValue = arr[i];
         if (currentValue > 0 ) {
             numPositives++;
         }
@@ -34,13 +36,15 @@ void plusMinus(vector<int> arr) {
             cout << "ERROR: Unexpected value" << endl;
         }
     }
-
+    float floatPositives = static_cast <float> (numPositives);
+    float floatNegatives = static_cast <float> (numNegatives);
+    float floatZeroes = static_cast <float> (numZeroes);
     //Determine ratio of positive elements in array
-    ratioPositive = (numPositives / arr.size());
+    ratioPositive = (floatPositives / arraySize);
     //Determine ratio of negative elements in array
-    ratioNegative = (numNegatives / arr.size());
+    ratioNegative = (floatNegatives / arraySize);
     //Determine ratio of zero (0) elements in array
-    ratioZero = (numZeroes / arr.size());
+    ratioZero = (floatZeroes / arraySize);
     //Print each ratio separated by a newline with a precision of 6 decimals
     cout << setprecision(6) << ratioPositive << endl;
     cout << ratioNegative << endl;
